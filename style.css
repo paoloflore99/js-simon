@@ -1,0 +1,64 @@
+.imgp {
+    width: 600px;
+}
+
+.modifiche{
+    
+}
+
+
+body {
+    color: black;
+}
+
+.ora-telefono {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    color: rgb(0, 0, 0);
+    font-size: 9rem;
+}
+
+.imgpi{
+    position: relative;
+    width: 100%;
+}
+
+.giorno {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    font-size: 2rem;
+}
+
+
+.luchetto {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.pippo {
+    position: absolute;
+    top: 54%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.batteria {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.btn-apero {
+    color: white;
+}
