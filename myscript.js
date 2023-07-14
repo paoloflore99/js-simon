@@ -69,10 +69,6 @@ setInterval(function () {
 
 
 
-
-
-
-
 // const difference = document.getElementById("taimer")
 
 
@@ -90,5 +86,44 @@ setInterval(function () {
 
 // countdownContiner.innerHTML = hh + ":" + mm;//palesemte copiato da florian
 
+//-----------------
+
+
+function paddedFormat(num) {
+    return num < 10 ? "0" + num : num;
+}
+
+    function startCountDown(duration, element) {
+        let secondsRemaining = duration;
+        let hou = 0;
+        let min = 0;
+        let sec = 0;
+
+    let countInterval = setInterval(function () {
+      hou = parseInt(secondsRemaining / 3600); // Calcolo delle ore
+      min = parseInt((secondsRemaining % 3600) / 60); // Calcolo dei minuti
+      sec = parseInt(secondsRemaining % 60); // Calcolo dei secondi
+
+    element.textContent = `${paddedFormat(hou)}:${paddedFormat(min)}:${paddedFormat(sec)}`;
+
+    secondsRemaining = secondsRemaining - 1;
+            if (secondsRemaining < 0) {
+                clearInterval(countInterval);
+            }
+    }, 1000);
+    }
+
+    window.onload = function () {
+        let time_hours = 9; // Valore in ore
+        let time_minutes = 30; // Valore in minuti
+        let time_seconds = 0; // Valore in secondi
+
+    let duration = time_hours * 3600 + time_minutes * 60 + time_seconds;
+
+    let element = document.querySelector("#count-down-timer");
+    element.textContent = `${paddedFormat(time_hours)}:${paddedFormat(time_minutes)}:${paddedFormat(time_seconds)}`;
+    startCountDown(duration, element);
+};
+//-----------------
 
 
